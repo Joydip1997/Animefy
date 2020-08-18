@@ -14,4 +14,4 @@ It has wide varity of 4k anime wallpapers for mobile devices
 
 
 
-![https://play.google.com/store/apps/details?id=com.androdude.animefy](Images/google-play-badge.png)
+[Download The App](https://play.google.com/store/apps/details?id=com.androdude.animefy)
