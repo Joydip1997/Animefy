@@ -29,7 +29,7 @@ class Home extends StatefulWidget {
   Connectivity connectivity;
   StreamSubscription<ConnectivityResult> subscription;
 
-  String _api = "https://pramanagro.com/data.json";
+  String _api = "https://androdude.com/anime_fy.json";
 
 
 
