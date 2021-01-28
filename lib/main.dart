@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:math';
 import 'package:animefy/Loader.dart';
-import 'package:animefy/ModelClass/images.dart';
+import 'package:animefy/ModelClass/Images.dart';
 import 'package:animefy/Utils/lottieAnim.dart';
 import 'package:animefy/brandName.dart';
 import 'package:animefy/fullImageView.dart';
@@ -21,7 +21,7 @@ void main() {
 }
 
 class Home extends StatefulWidget {
-  var _images = List<images>();
+  var _images = List<Images>();
   var _theme = 0;
   var _isOnline=true;
   var _connectionStatus = 'Unknown';
@@ -29,7 +29,7 @@ class Home extends StatefulWidget {
   Connectivity connectivity;
   StreamSubscription<ConnectivityResult> subscription;
 
-  String _api = "https://androdude.com/anime_fy.json";
+  String _api = "https://androdude.com/animefy/anime_fy.json";
 
 
 
@@ -44,7 +44,7 @@ var j=0;
 var random = new Random();
 
 //Shuffle The List
-List<images> shuffle(List<images> items) {
+List<Images> shuffle(List<Images> items) {
 
     // Go through all elements.
     for (var i = items.length - 1; i > 0; i--) {
@@ -71,7 +71,7 @@ void getImages() async
      for(var i in json.decode(response.body))
      {
        setState(() {
-         widget._images.add(images(i,i));
+         widget._images.add(Images(i,i));
        });
      }
      setState(() {
@@ -161,7 +161,7 @@ void changeTheme()
   }
 }
 
-Widget gridImages(List<images> images,BuildContext context)
+Widget gridImages(List<Images> images,BuildContext context)
 {
   return Container(
 
@@ -204,7 +204,7 @@ Widget gridImages(List<images> images,BuildContext context)
   );
 }
 
-Widget GridImages(List<images> images,BuildContext context)
+Widget GridImages(List<Images> images,BuildContext context)
 {
   return Container(
 
